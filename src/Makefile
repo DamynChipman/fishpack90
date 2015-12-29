@@ -13,6 +13,9 @@ OBJS=$(addprefix ../objs/,$(OBJ))
 $(LIB) : $(OBJS)
 	$(AR) -rv $@ $? 
 
+fish.F : fish.src
+	cp fish.src fish.F
+
 ifeq ($(UNAMES),AIX)
 
 fish.f : fish.F
@@ -49,11 +52,8 @@ endif
 
 ifeq ($(UNAMES),Darwin)
 
-fish.F : fish.F.orig
-	cp fish.F.orig fish.F
-
 ../objs/fish.o : fish.F
-	$(F90) -c $< -o $@; mv FISH.mod ../lib
+	$(F90) -c -DGFORTRAN $< -o $@; mv FISH.mod ../lib
 
 ../objs/%.o : %.f
 	$(F90) -c $< -o $@

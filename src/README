@@ -1,3 +1,9 @@
+#Explanation of src file fish.src:
+
+File names fish.f and fish.F equate under Mac OS X, hence "make clean" removes both. 
+
+We use file fish.src to restore file fish.F whenever gmake is invoked, to insure file fish.F is present.
+
 11/30/2011
 
 Add file fish.F.orig to handle the Makefile case for Mac OS X (Darwin). File fish.F.orig
