@@ -14,8 +14,17 @@ ifeq ($(UNAMES),Linux)
 
   else
 
-    F90 := g95 -DG95 -g -fmod=../lib -I../lib 
-    CPP := g95 -E -DG95
+    F90 := gfortran \
+    -DG95 \
+    -freal-4-real-8\
+    -fdefault-real-8 \
+    -fdefault-double-8 \
+    -g \
+    -J../lib \
+    -I../lib
+
+    CPP := gfortran -E -DG95
+
 
   endif
 
