@@ -167,7 +167,7 @@ C                        REFERENCE.
 C
 C PORTABILITY            FORTRAN 90 --
 C                        THE MACHINE DEPENDENT CONSTANT PI IS
-C                        DEFINED IN FUNCTION PIMACHH.
+C                        DEFINED IN FUNCTION PI_MACH.
 C
 C REFERENCES             SWEET, R., "A CYCLIC REDUCTION ALGORITHM FOR
 C                        SOLVING BLOCK TRIDIAGONAL SYSTEMS OF ARBITRARY

@@ -1283,7 +1283,7 @@ C
 
       SUBROUTINE CMPCSG(N, IJUMP, FNUM, FDEN, A)
       implicit none
-      REAL PIMACHH
+      REAL PI_MACH
 C-----------------------------------------------
 C   D u m m y   A r g u m e n t s
 C-----------------------------------------------

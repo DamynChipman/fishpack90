@@ -76,7 +76,7 @@ C                            * * *  IMPORTANT  * * *
 C
 C                          IF B IS EQUAL TO PI, THEN B MUST BE
 C                          COMPUTED USING THE STATEMENT
-C                            B = PIMACHH(DUM)
+C                            B = PI_MACH(DUM)
 C
 C                          THIS INSURES THAT B IN THE USER"S PROGRAM
 C                          IS EQUAL TO PI IN THIS PROGRAM WHICH
