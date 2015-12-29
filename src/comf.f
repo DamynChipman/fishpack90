@@ -40,7 +40,7 @@ C                        ENTRIES, SUPPORTING FISHPACK ENTRIES BLKTRI
 C                        AND CBLKTRI. THAT IS, THESE ROUTINES ARE
 C                        NOT CALLED DIRECTLY BY USERS, BUT RATHER
 C                        BY ENTRIES WITHIN BLKTRI AND CBLKTRI.
-C                        DESCRIPTION OF ENTRIES EPMACH AND PIMACH
+C                        DESCRIPTION OF ENTRIES EPMACH AND PIMACHH
 C                        FOLLOW BELOW.
 C
 C LATEST REVISION        JUNE 2004
@@ -97,14 +97,14 @@ C                        THAN THE CRAY1, BUT THE RETURNED VALUE MAY
 C                        BE UNSATISFACTORY.  SEE HISTORY ABOVE.
 C ********************************************************************
 C
-C FUNCTION PIMACH (DUM)
+C FUNCTION PIMACHH (DUM)
 C
 C PURPOSE                TO SUPPLY THE VALUE OF THE CONSTANT PI
 C                        CORRECT TO MACHINE PRECISION WHERE
 C                        PI=3.141592653589793238462643383279502884197
 C                             1693993751058209749446
 C
-C USAGE                  PI = PIMACH (DUM)
+C USAGE                  PI = PIMACHH (DUM)
 C
 C ARGUMENTS
 C ON INPUT               DUM
@@ -168,7 +168,7 @@ C-----------------------------------------------
       END SUBROUTINE STRWRD 
 
 
-      REAL FUNCTION PIMACH (DUM) 
+      REAL FUNCTION PIMACHH (DUM)
       IMPLICIT NONE
 C-----------------------------------------------
 C   D u m m y   A r g u m e n t s
@@ -180,9 +180,9 @@ C-----------------------------------------------
 C-----------------------------------------------
 C     PI=3.1415926535897932384626433832795028841971693993751058209749446
 C
-      PIMACH = 4.*ATAN(1.0) 
+      PIMACHH = 4.*ATAN(1.0)
       RETURN  
-      END FUNCTION PIMACH 
+      END FUNCTION PIMACHH
 
 
       REAL FUNCTION PPSGF (X, IZ, C, A, BH) 
@@ -280,5 +280,7 @@ C DECEMBER  1979    VERSION 3.1
 C FEBRUARY  1985    DOCUMENTATION UPGRADE
 C NOVEMBER  1988    VERSION 3.2, FORTRAN 77 CHANGES
 C June      2004    Version 5.0, Fortran 90 changes
+C September 2015    Renamed PIMACH -> PIMACHH to avoid conflicts with
+C                   the library SPHEREPACK 3.2
 C-----------------------------------------------------------------------
-      END FUNCTION PSGF 
+      END FUNCTION PSGF

@@ -71,7 +71,7 @@ C                          * * * IMPORTANT * * *
 C
 C                          IF TF IS EQUAL TO PI THEN IT MUST BE
 C                          COMPUTED USING THE STATEMENT
-C                          TF = PIMACH(DUM). THIS INSURES THAT TF
+C                          TF = PIMACHH(DUM). THIS INSURES THAT TF
 C                          IN THE USER'S PROGRAM IS EQUAL TO PI IN
 C                          THIS PROGRAM WHICH PERMITS SEVERAL TESTS
 C                          OF THE INPUT PARAMETERS THAT OTHERWISE
@@ -169,7 +169,7 @@ C                          * * * IMPORTANT * * *
 C
 C                          IF PF IS EQUAL TO 2*PI THEN IT MUST BE
 C                          COMPUTED USING THE STATEMENT
-C                          PF = 2.*PIMACH(DUM). THIS INSURES THAT
+C                          PF = 2.*PIMACHH(DUM). THIS INSURES THAT
 C                          PF IN THE USERS PROGRAM IS EQUAL TO
 C                          2*PI IN THIS PROGRAM WHICH PERMITS TESTS
 C                          OF THE INPUT PARAMETERS THAT OTHERWISE
