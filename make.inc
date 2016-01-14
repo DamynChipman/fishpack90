@@ -3,6 +3,11 @@ LIB=../lib/libfish90.a
 
 UNAMES := $(shell uname -s)
 
+ENFORCE_64_BIT_PRECISION = \
+-freal-4-real-8\
+-fdefault-real-8 \
+-fdefault-double-8
+
 ifeq ($(UNAMES),Linux)
 
   PGI := $(shell pgf90 2>&1)
@@ -16,15 +21,12 @@ ifeq ($(UNAMES),Linux)
 
     F90 := gfortran \
     -DG95 \
-    -freal-4-real-8\
-    -fdefault-real-8 \
-    -fdefault-double-8 \
-    -g \
+	-O3 \
+    $(ENFORCE_64_BIT_PRECISION) \
     -J../lib \
     -I../lib
 
     CPP := gfortran -E -DG95
-
 
   endif
 
@@ -65,8 +67,7 @@ ifeq ($(UNAMES),Darwin)
     AR := /usr/bin/ar
     F90 := gfortran \
     -O3 \
-    -fdefault-real-8 \
-    -fdefault-double-8 \
+	$(ENFORCE_64_BIT_PRECISION) \
     -I../lib 
     CPP := gfortran -cpp
     MAKE := /usr/local/bin/gmake
