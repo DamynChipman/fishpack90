@@ -3,6 +3,11 @@ LIB=../lib/libfish90.a
 
 UNAMES := $(shell uname -s)
 
+#EXTERNAL_LIB_DIRECTORY = /usr/local/lib
+EXTERNAL_LIB_DIRECTORY = /usr/local/lib64
+
+BIN_DIRECTORY = /usr/local/bin
+
 ENFORCE_64_BIT_PRECISION = \
 -fdefault-real-8 \
 -fdefault-double-8
