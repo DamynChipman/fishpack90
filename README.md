@@ -1,3 +1,8 @@
+# FISHPACK90 - Built and Tested with CMake
+## Damyn Chipman
+
+### forked from [jlokimlin/fishpack90](https://github.com/jlokimlin/fishpack90)
+
 FISHPACK90 Version 1.1
 ----------------------
 Efficient FORTRAN Subprograms for the Solution of Separable Elliptic 
