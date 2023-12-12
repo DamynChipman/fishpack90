@@ -57,8 +57,8 @@ C
 !       first deallocate to avoid memory leakage
 #ifndef G95
 #ifndef GFORTRAN
- 	if(associated(wsave%rew))DEALLOCATE(wsave%rew)
- 	if(associated(wsave%cxw))DEALLOCATE(wsave%cxw)
+ 	! if(associated(wsave%rew))DEALLOCATE(wsave%rew)
+ 	! if(associated(wsave%cxw))DEALLOCATE(wsave%cxw)
 #endif
 #endif
 !       allocate irwk words of real work space
